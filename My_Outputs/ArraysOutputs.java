@@ -189,25 +189,26 @@ public class ArraysOutputs {
             arr[i] = input.nextInt();
         }
 
+        // Close the Scanner since this is the last input needed for this example.
         input.close();
     }
 
     // Takes input for the sixth example: summation/average traversal.
-static void getInput6() {
-    Scanner input = new Scanner(System.in);
+    static void getInput6() {
+        Scanner input = new Scanner(System.in);
 
-    System.out.print("\nEnter the size of the array for summation/average traversal: ");
-    int size = input.nextInt();
+        System.out.print("\nEnter the size of the array for summation/average traversal: ");
+        int size = input.nextInt();
 
-    // Create a new array using the user's chosen size.
-    arr = new int[size];
+        // Create a new array using the user's chosen size.
+        arr = new int[size];
 
-    // Store each value in the array.
-    for (int i = 0; i < size; i++) {
-        System.out.print("Enter element " + (i + 1) + ": ");
-        arr[i] = input.nextInt();
+        // Store each value in the array.
+        for (int i = 0; i < size; i++) {
+            System.out.print("Enter element " + (i + 1) + ": ");
+            arr[i] = input.nextInt();
+        }
     }
-}
 
     // Modifies each element in the array by multiplying it by 2.
     static void printModificationTraversal(int[] arr) {
@@ -217,9 +218,11 @@ static void getInput6() {
         // Traverse the array and modify each element.
         for (int i = 0; i < arr.length; i++) {
 
-            // Multiply the current element by 2.
+            // Multiply the current element by 2 and store it back in the array
+            // (this changes the original array, not just what gets printed).
             arr[i] = arr[i] * 2;
 
+            // Print the newly modified value.
             System.out.print(arr[i]);
 
             // Add a comma between values, except after the last one.
@@ -233,24 +236,24 @@ static void getInput6() {
     }
 
     // Calculates the sum and average of the array elements.
-static void printSummationAverageTraversal(int[] arr) {
+    static void printSummationAverageTraversal(int[] arr) {
 
-    int sum = 0;
-    double average;
+        int sum = 0;
+        double average;
 
-    // Traverse the array and calculate the sum.
-    for (int i = 0; i < arr.length; i++) {
-        sum += arr[i];
+        // Traverse the array and calculate the sum.
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        // Calculate the average.
+        average = (double) sum / arr.length;
+
+        System.out.println("Summation/Average Traversal");
+        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + average);
+        System.out.println("Size: " + arr.length + " elements");
     }
-
-    // Calculate the average.
-    average = (double) sum / arr.length;
-
-    System.out.println("Summation/Average Traversal");
-    System.out.println("Sum: " + sum);
-    System.out.println("Average: " + average);
-    System.out.println("Size: " + arr.length + " elements");
-}
 
     public static void main(String[] args) {
 
@@ -270,8 +273,15 @@ static void printSummationAverageTraversal(int[] arr) {
         getInput4();
         printSearchTraversal(arr);
 
-        // Fifth example: collect input and modify each element in the array.
+        // Fifth example: modification traversal.
+        // getInput5() asks for an array size, fills the array with user input,
+        // then closes the Scanner since no more input is taken after this point
+        // in this particular flow.
         getInput5();
+
+        // printModificationTraversal(arr) multiplies each element in the array
+        // by 2 (modifying the original array, not just printing it), then
+        // prints the updated values and the array's size.
         printModificationTraversal(arr);
 
         // Sixth example: collect input and calculate the sum and average.

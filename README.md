@@ -3,42 +3,57 @@
 > [!NOTE]
 > A step-by-step learning journey through Data Structures & Algorithms, from beginner to exam-ready.
 > **Language:** Java · **Focus:** Academic foundations & exam preparation
+> Part of the [`DSA_OOP-practice`](../README.md) repo — see the root README for the OOP track.
+
+---
+
+## 📑 Table of Contents
+
+- [Repository Structure](#-repository-structure)
+- [Learning Phases](#-learning-phases)
+- [How to Compile & Run](#️-how-to-compile--run)
+- [How Each File is Structured](#-how-each-file-is-structured)
+- [How to Study](#-how-to-study)
+- [Progress Tracker](#-progress-tracker)
+- [Topics Covered](#-topics-covered)
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-DSA_practice/
-├── README.md                          ← You are here
+DSA_Practice/
+├── README.md                           ← You are here
+├── START_HERE_Java_Starter_Guide.md    — Read this first if Java itself is new to you
 ├── 01_Basics/
-│   ├── ArraysDemo.java                — Traversal, search, insert, delete, reverse
-│   ├── StringsDemo.java               — String manipulation, palindrome, frequency
+│   ├── ArraysDemo.java                 — Traversal, search, insert, delete, reverse
+│   ├── StringsDemo.java                — String manipulation, palindrome, frequency
 │   └── BitManipulationDemo.java        — Bitwise operators, tricks, Kernighan's
 ├── 02_Math_Recursion/
-│   ├── RecursionDemo.java             — Factorial, Fibonacci, power
-│   ├── MathPrimeGCD.java             — Prime checking, GCD/LCM
-│   └── SortingBasicsDemo.java         — Bubble, selection, insertion sort
+│   ├── RecursionDemo.java              — Factorial, Fibonacci, power
+│   ├── MathPrimeGCD.java               — Prime checking, GCD/LCM
+│   └── SortingBasicsDemo.java          — Bubble, selection, insertion sort
 ├── 03_Linear_DS/
-│   ├── LinkedListDemo.java           — Singly linked list operations
-│   ├── StackDemo.java                 — Stack (array & node based)
-│   ├── QueueDemo.java                 — Queue (array & node based)
-│   └── DequeDemo.java                 — Double-ended queue
+│   ├── LinkedListDemo.java             — Singly linked list operations
+│   ├── StackDemo.java                  — Stack (array & node based)
+│   ├── QueueDemo.java                  — Queue (array & node based)
+│   └── DequeDemo.java                  — Double-ended queue
 ├── 04_Hashing/
-│   ├── HashTableDemo.java             — Hash map, collision handling
-│   └── TwoPointersDemo.java           — Two pointer technique
+│   ├── HashTableDemo.java              — Hash map, collision handling
+│   └── TwoPointersDemo.java            — Two pointer technique
 ├── 05_Trees/
-│   ├── BinaryTreeDemo.java            — Tree traversals (4 types)
-│   ├── BinarySearchTreeDemo.java      — BST insert, search, delete
-│   └── HeapPriorityQueueDemo.java     — Min/Max heap, priority queue
+│   ├── BinaryTreeDemo.java             — Tree traversals (4 types)
+│   ├── BinarySearchTreeDemo.java       — BST insert, search, delete
+│   └── HeapPriorityQueueDemo.java      — Min/Max heap, priority queue
 ├── 06_Graphs/
-│   ├── GraphRepresentation.java       — Adjacency matrix & list
-│   ├── BFSDemo.java                   — Breadth-first & Depth-first search
-│   └── DijkstraDemo.java              — Dijkstra's shortest path
-└── 07_Algorithms/
-    ├── MergeQuickSortDemo.java         — Merge sort & Quick sort
-    ├── BinarySearchDemo.java          — Binary search & variants
-    └── GreedyDPBasicsDemo.java         — Greedy & Dynamic programming intro
+│   ├── GraphRepresentation.java        — Adjacency matrix & list
+│   ├── BFSDemo.java                    — Breadth-first & Depth-first search
+│   └── DijkstraDemo.java               — Dijkstra's shortest path
+├── 07_Algorithms/
+│   ├── MergeQuickSortDemo.java         — Merge sort & Quick sort
+│   ├── BinarySearchDemo.java           — Binary search & variants
+│   └── GreedyDPBasicsDemo.java         — Greedy & Dynamic programming intro
+└── My_Outputs/                         — Your own assignment work & practice attempts
 ```
 
 ---
@@ -54,6 +69,9 @@ DSA_practice/
 | **5** | `05_Trees` | Binary Trees, BST, Heaps | 🔜 Upcoming |
 | **6** | `06_Graphs` | BFS/DFS, Graph Representation, Shortest Path | 🔜 Upcoming |
 | **7** | `07_Algorithms` | Merge/Quick Sort, Binary Search, Greedy/DP | 🔜 Upcoming |
+
+> ✅ Ready = files exist and are ready to study. It doesn't mean you've finished them —
+> use the [Progress Tracker](#-progress-tracker) below to track your own completion.
 
 ---
 
@@ -104,8 +122,9 @@ Every `.java` file follows this format:
 2. **Compile & Run** the file to see the demonstrations
 3. **Read** the code line by line — understand HOW it works
 4. **Try** the practice problems at the bottom of each file
-5. **Ask** for help when stuck — no shame in that!
-6. **Move** to the next topic when comfortable
+5. **Save your attempts** in `My_Outputs/` so your own work stays separate from the demo files
+6. **Ask** for help when stuck — no shame in that!
+7. **Move** to the next topic when comfortable
 
 ---
 
@@ -166,6 +185,10 @@ Every `.java` file follows this format:
 | **Trees** *(upcoming)* | Traversals, BST, heaps |
 | **Graphs** *(upcoming)* | Representation, BFS, DFS, Dijkstra |
 | **Algorithms** *(upcoming)* | Binary search, greedy, dynamic programming |
+
+> 💡 Not covered yet but worth adding later: **Backtracking**, **Tries**,
+> **Union-Find / Disjoint Set**, and **Minimum Spanning Tree / Topological Sort**
+> in the Graphs phase. These show up often in exams and coding interviews.
 
 ---
 

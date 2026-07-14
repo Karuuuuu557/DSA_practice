@@ -1,7 +1,9 @@
 /*
  * TOPIC: Method overriding
- * Analogy: Same job title, different working style per person.
- * Link: Builds directly on inheritance.
+ * Concept intro:
+ * Overriding means child class customizes inherited behavior with same method signature.
+ * Why it matters: enables runtime polymorphism (dynamic dispatch).
+ * Link: builds directly on inheritance.
  */
 public class MethodOverridingDemo {
     static class Animal {
@@ -17,18 +19,27 @@ public class MethodOverridingDemo {
     }
 
     public static void main(String[] args) {
+        // Beginner example: parent reference, child implementation.
         Animal a = new Dog(); // Parent reference, child object.
         a.sound(); // Runtime chooses Dog.sound() because object type wins.
 
+        // Intermediate example: one loop handling many subtype behaviors.
         Animal[] pets = {new Dog(), new Cat()};
         for (Animal p : pets) p.sound();
 
-        System.out.println("Pro trade-off: overriding gives extensibility, but too many overrides can hide flow.");
+        // Pro example: trade-off discussion.
+        System.out.println("Pro trade-off: overriding is flexible, but keep contracts consistent across subclasses.");
     }
 }
 
 /*
- * Pitfalls: mismatched method signature, forgetting @Override, confusing overloading with overriding.
- * Practice: Payment.process(), Notification.send(), Shape.area() override hierarchy.
+ * Common pitfalls:
+ * 1) Changing parameters accidentally (becomes overloading, not overriding).
+ * 2) Skipping @Override and missing compiler protection.
+ * 3) Violating parent contract behavior in child implementations.
+ *
+ * Practice problems:
+ * Easy: override toString() in a custom class.
+ * Medium: Payment hierarchy with different processing fees.
+ * Hard: template method style parent class with overridable hooks.
  */
-

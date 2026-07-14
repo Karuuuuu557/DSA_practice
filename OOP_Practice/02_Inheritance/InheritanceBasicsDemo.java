@@ -1,7 +1,9 @@
 /*
  * TOPIC: Inheritance basics
- * Analogy: Child classes inherit family traits from a parent class.
- * Link: Extends classes/objects and constructors from 01_Fundamentals.
+ * Concept intro:
+ * Inheritance is an "is-a" relationship: a Car is a Vehicle with extra details.
+ * Why it matters: reuse shared behavior while specializing where needed.
+ * Link: extends classes/objects and constructors from 01_Fundamentals.
  */
 public class InheritanceBasicsDemo {
     static class Vehicle {
@@ -16,20 +18,29 @@ public class InheritanceBasicsDemo {
     }
 
     public static void main(String[] args) {
-        Car car = new Car("Toyota", 4); // Create child object; parent state initialized via super.
-        car.move(); // Child inherits parent method directly.
-        car.honk(); // Child adds its own behavior beyond parent class.
+        // Beginner example: create child object and call inherited + own methods.
+        Car car = new Car("Toyota", 4); // Child constructor calls parent via super(brand).
+        car.move(); // Inherited method from Vehicle works directly on Car object.
+        car.honk(); // Child-specific behavior adds specialization.
 
+        // Intermediate example: upcasting for API flexibility.
         Vehicle v = new Car("Honda", 2);
-        v.move();
-        System.out.println("Intermediate: upcasting lets one API handle many subtypes.");
+        v.move(); // Parent reference can hold any subtype instance.
+        System.out.println("Intermediate: upcasting lets one method accept many Vehicle subtypes.");
 
-        System.out.println("Pro note: use inheritance for 'is-a' relationships, not just code reuse.");
+        // Pro example: design guidance trade-off.
+        System.out.println("Pro note: prefer composition when relationship is 'has-a', not 'is-a'.");
     }
 }
 
 /*
- * Pitfalls: forcing wrong inheritance, forgetting super(), abusing deep inheritance chains.
- * Practice: Animal->Dog/Cat, Employee->Manager, multilevel inheritance demo.
+ * Common pitfalls:
+ * 1) Using inheritance for code reuse when there is no true "is-a" relation.
+ * 2) Forgetting super(...) in child constructor initialization.
+ * 3) Creating deep inheritance chains that become hard to reason about.
+ *
+ * Practice problems:
+ * Easy: Person -> Student with extra field.
+ * Medium: Vehicle -> ElectricCar with overridden move().
+ * Hard: redesign an overly deep hierarchy using composition.
  */
-

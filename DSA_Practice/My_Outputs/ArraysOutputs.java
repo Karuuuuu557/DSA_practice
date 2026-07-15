@@ -228,7 +228,6 @@ public class ArraysOutputs {
     }
 
     // ================= EXAMPLE 6: SUMMATION/AVERAGE TRAVERSAL =================
-
     // Takes input for the sixth example: summation/average traversal.
     static void getInput6() {
         Scanner input = new Scanner(System.in);

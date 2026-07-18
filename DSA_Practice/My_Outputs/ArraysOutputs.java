@@ -372,9 +372,7 @@ public class ArraysOutputs {
         printSearchTraversal(arr);
 
         // Fifth example: modification traversal.
-        // getInput5() reads in the array size and its elements from the user,
-        // then closes the Scanner since input-reading is done at this point
-        // in the flow.
+        // getInput5() reads in the array size and its elements from the user.
         getInput5();
 
         // printModificationTraversal(arr) doubles every value in the array

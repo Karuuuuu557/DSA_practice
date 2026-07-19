@@ -40,7 +40,7 @@ public class ArraysOutputs {
         // Fill the array by reading one number for each index.
         for (int i = 0; i < size; i++) {
             System.out.print("Enter element " + (i + 1) + ": ");
-            arr[i] = input.nextInt(); // Store the input value at index i.
+            arr[i] = input.nextInt(); // Store the input value at index i, index i is the first index of the array, which is 0.
         }
     }
 
@@ -51,6 +51,7 @@ public class ArraysOutputs {
 
         // The last index in an array is always length - 1 because indexes start at 0.
         for (int i = arr.length - 1; i >= 0; i--) {
+        
             System.out.print(arr[i]);
 
             // Print commas between values for readability, but not after the final value.

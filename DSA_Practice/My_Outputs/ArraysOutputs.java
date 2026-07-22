@@ -131,12 +131,12 @@ public class ArraysOutputs {
         for (int i = 0; i < arr.length; i++) { //this goes through all the array elements and checks if they are even or not
             // An integer is even when the remainder of dividing by 2 is zero.
             if (arr[i] % 2 == 0) { //if the value of the array at index i is even, then print it
-                if (found) { //we set the default bollean value to false, so when we find the number that is even, we change it to true.
-                    System.out.print(", ");
+                if (found) { 
+                    System.out.print(", ");//if we found another even number, this prints a comma after the first even number
                 }
 
-                System.out.print(arr[i]);
-                found = true;
+                System.out.print(arr[i]);//prints the currrent value of the array at index i if it is even
+                found = true; //from the set boolean value false, we change it to true when we find the first even number, so that we can print the comma before the next even number.
             }
         }
 

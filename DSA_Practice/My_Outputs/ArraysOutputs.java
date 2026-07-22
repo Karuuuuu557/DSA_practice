@@ -178,7 +178,7 @@ public class ArraysOutputs {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == target) { //if the value of the index at current i is equal to the target value, then print the index of the value and set found to true
                 System.out.println("Value " + target + " found at index " + i + ".");//prints the index of the value that was found in the array
-                found = true;
+                found = true; //the default value of found is false, but if we find the value in the array we set it to true so that we can print the message that it was found
                 break; // Stop right away once the value is found.
             }
         }

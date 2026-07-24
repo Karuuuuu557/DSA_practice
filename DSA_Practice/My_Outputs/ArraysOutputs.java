@@ -328,11 +328,11 @@ public class ArraysOutputs {
         for (int i = 0; i < arr.length; i += step) {
 
             if (found) {
-                System.out.print(", ");
+                System.out.print(", "); //if the first value is found, then print a comma before the next value
             }
 
-            System.out.print(arr[i]);
-            found = true;
+            System.out.print(arr[i]); //print the current value the array at index i
+            found = true; //change the binary value of found to true so that we can print a comma before the next value
         }
 
         System.out.println();
